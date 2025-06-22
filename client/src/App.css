@@ -1,0 +1,72 @@
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(to right, #4facfe, #00f2fe);
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  color: #0d47a1;
+  margin-bottom: 1rem;
+}
+
+.controls,
+.tools,
+.algorithms {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 1rem;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  border: none;
+  background: #1976d2;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+button:hover {
+  background: #0d47a1;
+}
+
+.history {
+  margin-top: 2rem;
+  width: 90%;
+  background-color: #fffde7;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.delete-button {
+  margin: right;
+  background-color: #e53935;
+}
+
+.history table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.history th,
+.history td {
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+}
+
+.history th {
+  background-color: #ffe082;
+}
+
+.footer {
+  margin-top: 2rem;
+  color: #0d47a1;
+  font-weight: bold;
+}
