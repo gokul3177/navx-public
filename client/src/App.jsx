@@ -115,7 +115,7 @@ function App() {
       time_taken: (t1 - t0).toFixed(2),
     };
 
-    await fetch("http://localhost:4000/api/path", {
+    await fetch("https://navx-public-production.up.railway.app/api/path", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),
@@ -125,7 +125,7 @@ function App() {
   const handleClear = () => setGrid(createEmptyGrid());
 
   const handleHistory = async () => {
-    const res = await fetch("http://localhost:4000/api/paths");
+    const res = await fetch("https://navx-public-production.up.railway.app/api/paths");
     const data = await res.json();
     setHistory(data);
     setShowHistory(true);
@@ -135,9 +135,9 @@ function App() {
     const confirm = window.confirm("⚠️ This action is irreversible. Delete all history?");
     if (!confirm) return;
 
-    await fetch("http://localhost:4000/api/paths", { method: "DELETE" });
+    await fetch("https://navx-public-production.up.railway.app/api/paths", { method: "DELETE" });
 
-    const res = await fetch("http://localhost:4000/api/paths");
+    const res = await fetch("https://navx-public-production.up.railway.app/api/paths");
     const data = await res.json();
     setHistory(data);
     setShowHistory(false);
